@@ -43,7 +43,7 @@
 			min-height: 50px;
 			border: 0;
 			border-radius: 5px;
-			background: #176b58;
+			background: #172d6b;
 			color: white;
 			font: inherit;
 			font-weight: 650;
@@ -102,7 +102,7 @@
 			status.dataset.kind = '';
 
 			try {
-				const response = await fetch('/upload', { method: 'POST', body: new FormData(form) });
+				const response = await fetch('/picture/upload', { method: 'POST', body: new FormData(form) });
 				const result = await response.json();
 				if (!response.ok) throw new Error(result.error || 'Upload fehlgeschlagen.');
 				status.textContent = result.message;
